@@ -1,0 +1,42 @@
+using System;
+
+namespace test_prodject
+{
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+          Console.WriteLine("Hello my friend.\n Enter two number and viberi deistvie s nimi");
+          string OnE=Console.ReadLine();
+          double first= Convert.ToDouble(OnE);
+          Console.WriteLine("Enter secondary number");
+          string Two = Console.ReadLine ();
+          double second = Convert.ToDouble(Two);
+          Console.WriteLine("Viberite deistvie s chislami(+ - * /");
+          string deistvie= Console.ReadLine();
+          string summ = "+";
+          string raznost = "-";
+          string proizvedenie = "*";
+          string delenie = "/";
+          if (deistvie == summ) {
+              double Summa = first + second;
+              Console.WriteLine("Summa {0} and {1} = {2}",OnE, Two, Summa);
+          }
+          if (deistvie == raznost) {
+              double Raznost = first - second;
+              Console.WriteLine("Raznost {0} and {1} = {2}",OnE, Two, Raznost);
+          }
+          if (deistvie == proizvedenie) {
+              double Proizvedenie = first * second;
+              Console.WriteLine("Proizvedenie {0} and {1} = {2}",OnE, Two, Proizvedenie);
+          }
+          if (deistvie == delenie) {
+              double Delenie = first / second;
+              Console.WriteLine("Delenie {0} and {1} = {2}\n P.s Delenie vivodit tolko celie chilsa",OnE, Two, Delenie); 
+          }
+
+        }   
+    }
+}
