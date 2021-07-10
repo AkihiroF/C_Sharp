@@ -1,0 +1,46 @@
+using System;
+using System.IO;
+
+namespace test_prodject
+{
+    class Program
+    {
+        public static string First(string b){
+            
+         string writePath = @"C:\Users\AkihiroF\Desktop\number.txt";
+         using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))
+                {
+                    
+                    for (int a=0; a<= 1000; a++)
+                    {
+                        if (a % 2==0)
+                            continue;
+                        if (a % 3 == 0)
+                            continue;
+                        sw.WriteLine(a);
+                        
+
+                        
+
+                    }
+                }
+                    return (b);
+                    
+
+
+                
+        
+        }
+
+
+        static void Main(string[] args)
+        {
+            string alpha = "Ok";
+            Console.WriteLine(First(alpha));
+
+        }
+        
+
+          
+    }
+}
