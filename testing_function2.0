@@ -1,0 +1,29 @@
+using System;
+using System.IO;
+
+namespace Test_OOP//no testing OOP
+{
+    class Program
+    {
+        private static int PloPer(int a, int b){
+            string writePath = @"C:\Users\AkihiroF\Desktop\Test_OOP\Hueta.txt";
+            int per = a*2 + b*2;        
+            int plos = a * b;
+            using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default)){
+                sw.WriteLine("Perimetr = " + per);
+                sw.WriteLine("Ploshad = " + plos);
+            }
+            return 1;
+            
+            }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите данные для вычисления перриметра и Площади прямоугльника\na=\nb=");
+            int FirstStorona = Convert.ToInt32(Console.ReadLine());
+            int SecondStorona = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(PloPer(FirstStorona, SecondStorona)+ "...2"+ "...3");
+            Console.WriteLine("Perimetr i ploshad pryamougolnika so storonami {0} and {1} legit v file", FirstStorona, SecondStorona);
+            
+        }
+    }
+}
